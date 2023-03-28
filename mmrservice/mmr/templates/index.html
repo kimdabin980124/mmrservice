@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            MMR Calculator
+        </title>
+    </head>
+
+    <body>
+        <form action="{% url 'calculate_mmr' %}" method="get">
+            {% csrf_token %}
+            <label for="summoner_name">Summoner Name:</label>
+            <input type="text" id="summoner_name" name="summoner_name" required>
+            <input type="submit" value="Calculate MMR">
+        </form>
+    </body>
+
+    </html>
